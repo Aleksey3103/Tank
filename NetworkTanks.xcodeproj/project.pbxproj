@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		844E2025277C92320017D035 /* CGSIze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844E2023277C91F70017D035 /* CGSIze.swift */; };
 		844E2028277CB1290017D035 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 844E2027277CB1290017D035 /* Nuke */; };
 		847BB733277A0C3D001A1DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BB732277A0C3D001A1DCD /* AppDelegate.swift */; };
 		847BB737277A0C3D001A1DCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BB736277A0C3D001A1DCD /* ViewController.swift */; };
@@ -23,7 +22,6 @@
 
 /* Begin PBXFileReference section */
 		844E201E277C8F880017D035 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		844E2023277C91F70017D035 /* CGSIze.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGSIze.swift; path = ../../../../../.Trash/CGSIze.swift; sourceTree = "<group>"; };
 		847BB72F277A0C3D001A1DCD /* NetworkTanks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkTanks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847BB732277A0C3D001A1DCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847BB736277A0C3D001A1DCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				847BB732277A0C3D001A1DCD /* AppDelegate.swift */,
-				844E2023277C91F70017D035 /* CGSIze.swift */,
 				844E201B277C6CFB0017D035 /* Network */,
 				844E201A277C6CE20017D035 /* Model */,
 				844E2019277C6CCA0017D035 /* Views */,
@@ -216,7 +213,6 @@
 				847BB737277A0C3D001A1DCD /* ViewController.swift in Sources */,
 				847BB749277A1674001A1DCD /* ModelTanks.swift in Sources */,
 				847BB733277A0C3D001A1DCD /* AppDelegate.swift in Sources */,
-				844E2025277C92320017D035 /* CGSIze.swift in Sources */,
 				847BB74E277A29B3001A1DCD /* TanksViewModel.swift in Sources */,
 				847BB747277A0DA2001A1DCD /* CollectionViewCell.swift in Sources */,
 			);
