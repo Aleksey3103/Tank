@@ -24,7 +24,13 @@ class DetailedViewController: UIViewController {
         detailInfo()
         imageDetail.layer.cornerRadius = 8
         descriptionLabel.layer.cornerRadius = 8
+//        setupNavigationMultilineTitle()
         navigationItem.title = detailTank.name
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+//        setupNavigationMultilineTitle()
     }
     
     func detailInfo() {
@@ -34,4 +40,22 @@ class DetailedViewController: UIViewController {
         descriptionLabel.text = detailTank.description
     }
 }
-
+//extension DetailedViewController {
+//
+//    func setupNavigationMultilineTitle() {
+//        guard let navigationBar = self.navigationController?.navigationBar else { return }
+//        for sview in navigationBar.subviews {
+//            for ssview in sview.subviews {
+//                guard let label = ssview as? UILabel else { break }
+//                if label.text == self.title {
+//                    label.numberOfLines = 3
+//                    label.lineBreakMode = .byWordWrapping
+//                    label.sizeToFit()
+//                    UIView.animate(withDuration: 1, animations: {
+//                        navigationBar.frame.size.height = 57 + label.frame.height
+//                    })
+//                }
+//            }
+//        }
+//    }
+//}

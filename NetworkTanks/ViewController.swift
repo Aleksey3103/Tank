@@ -19,11 +19,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initViewModel()
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.largeTitleDisplayMode = .automatic
         navigationItem.title = "Tankopedia"
         setupActivityIndicator()
+    }
+    
+    override func loadView() {
+        super.loadView()
+        initViewModel()
     }
     
     func setupActivityIndicator() {
@@ -46,7 +50,7 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let numberOfItemsPerRow:CGFloat = 3
-        let spacingBetweenCells:CGFloat = 80
+        let spacingBetweenCells:CGFloat = 70
         let totalSpacing = (2 * self.sspacing) + ((numberOfItemsPerRow - 1) * spacingBetweenCells) //Amount of total spacing in a row
         if let collection = self.collectionView{
             let width = (collection.bounds.width + totalSpacing)/numberOfItemsPerRow
