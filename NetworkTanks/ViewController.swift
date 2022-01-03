@@ -7,22 +7,26 @@
 
 import UIKit
 import Nuke
+import SwiftUI
 
 class ViewController: UIViewController {
+ 
+    
     var apiClient = RequestManager()
     var dataViewModel = TanksViewModel()
     var datass = Datum(name: String.init(), images: Images(smallIcon: String.init()), description: String.init())
     let sspacing: CGFloat = 0.0
     var activityIndicator = UIActivityIndicatorView()
+    var shouldShowSearchResults = false
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.largeTitleDisplayMode = .automatic
         navigationItem.title = "Tankopedia"
-        
         setupActivityIndicator()
     }
     
@@ -84,6 +88,12 @@ extension ViewController: UICollectionViewDataSource {
         Nuke.loadImage(with: cellVM.tankImage, into: cell.imagePhoto)
         self.activityIndicator.stopAnimating()
         return cell
+    }
+    
+    func collectionView (_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let searchView: UICollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "SearchBar", for: indexPath)
+        
+        return searchView
     }
 }
 

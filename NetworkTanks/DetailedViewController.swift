@@ -29,26 +29,10 @@ class DetailedViewController: UIViewController {
 //        setupNavigationMultilineTitle()
         navigationItem.title = detailTank.name
     }
-    
-//        func navigationItemBar() {
-//            let label = UILabel(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.width, height: 44.0))
-//            label.backgroundColor = UIColor.clear
-//            label.numberOfLines = 0
-//            label.textAlignment = NSTextAlignment.center
-//            label.text = detailTank.name
-//            label.textColor = UIColor.white
-//            self.navigationItem.titleView = label
-//
-//    }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-//        setupNavigationMultilineTitle()
-    }
-    
     func detailInfo() {
         if let imageurl = imageTank.bigIcon {
-            Nuke.loadImage(with: imageurl, into: imageDetail.unsafelyUnwrapped)
+            Nuke.loadImage(with: imageurl, into: imageDetail.self)
         }
         descriptionLabel.text = detailTank.description
     }
