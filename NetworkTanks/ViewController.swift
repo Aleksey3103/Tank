@@ -22,12 +22,18 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.largeTitleDisplayMode = .automatic
         navigationItem.title = "Tankopedia"
+        
         setupActivityIndicator()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .black
     }
     
     override func loadView() {
         super.loadView()
         initViewModel()
+        
     }
     
     func setupActivityIndicator() {

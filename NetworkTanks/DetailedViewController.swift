@@ -24,9 +24,22 @@ class DetailedViewController: UIViewController {
         detailInfo()
         imageDetail.layer.cornerRadius = 8
         descriptionLabel.layer.cornerRadius = 8
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.largeTitleDisplayMode = .automatic
 //        setupNavigationMultilineTitle()
         navigationItem.title = detailTank.name
     }
+    
+//        func navigationItemBar() {
+//            let label = UILabel(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.width, height: 44.0))
+//            label.backgroundColor = UIColor.clear
+//            label.numberOfLines = 0
+//            label.textAlignment = NSTextAlignment.center
+//            label.text = detailTank.name
+//            label.textColor = UIColor.white
+//            self.navigationItem.titleView = label
+//
+//    }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
