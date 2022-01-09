@@ -77,13 +77,22 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="XvQ-zS-pwE"/>
                                 </connections>
                             </collectionView>
+                            <searchBar hidden="YES" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ovC-sC-7BR">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <color key="barTintColor" red="0.13471917720000001" green="0.2510092692" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.12704798580000001" green="0.214017123" blue="2.623125874e-05" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TZA-lN-2pN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="4HV-bH-7kL"/>
+                            <constraint firstItem="TZA-lN-2pN" firstAttribute="top" secondItem="ovC-sC-7BR" secondAttribute="bottom" constant="-44" id="AUx-wT-PeE"/>
+                            <constraint firstItem="ovC-sC-7BR" firstAttribute="trailing" secondItem="TZA-lN-2pN" secondAttribute="trailing" id="KEF-kE-11F"/>
+                            <constraint firstItem="ovC-sC-7BR" firstAttribute="leading" secondItem="TZA-lN-2pN" secondAttribute="leading" id="Q5r-9M-jH3"/>
                             <constraint firstItem="TZA-lN-2pN" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="XCF-3a-BUb"/>
                             <constraint firstItem="TZA-lN-2pN" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="efs-qD-bKj"/>
+                            <constraint firstItem="ovC-sC-7BR" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="topMargin" id="g0C-J0-Nbn"/>
                             <constraint firstItem="TZA-lN-2pN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="wDP-zV-6AL"/>
                         </constraints>
                     </view>
@@ -94,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="557" y="342"/>
+            <point key="canvasLocation" x="556.52173913043487" y="341.51785714285711"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="LhJ-Al-JHu">
@@ -246,11 +255,16 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXg-3m-6Al">
                                                 <rect key="frame" x="36" y="234" width="85" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1V-ss-qrQ">
-                                                <rect key="frame" x="44" y="263" width="333" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1V-ss-qrQ">
+                                                <rect key="frame" x="44" y="263" width="333" height="710.5"/>
+                                                <string key="text">Переночевав в гостинице в Гуаякиле, мы сели к агенту в машину и поехали на судно в Пуэрто Боливар. Доехали вопреки ожиданиям быстро, примерно за 3-4 часа. Погода была пасмурная и даже не смотря на то, что мы находимся недалеко от экватора, было прохладно. Почти все время, пока мы ехали, по обе стороны дороги были банановые плантации, но все равно в голове не укладывается: эти бананы грузят на суда в нескольких портах Эквадора десятками тысяч тонн каждый день, круглый год. Это ж несчастные бананы должны расти быстрее чем грибы.
+
+Дороги.
+Дороги в Эквадоре практически идеальные, хотя населенные пункты выглядят очень бедно. На дорогах много интересных машин, например очень много грузовиков - древних Фордов, которые я никогда раньше не видел. А еще несколько раз на глаза попадались старенькие Жигули :) А еще если кого-то обгоняешь и есть встречная машина, она обязательно включает фары. На больших машинах - грузовиках и автобусах, обязательно красуется местный тюнинг: машины разукрашенные, либо в наклейках, и обязательно везде огромное множество светодиодов, как будто новогодние елки едут и переливаются всеми цветами.
+</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>

@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-
 class RequestManager {
     
     var tankListDataSuccsesClosure: ((ModelTanks) -> ())?
@@ -18,10 +17,12 @@ class RequestManager {
     var appid = "8597d726286d88724d624cd07e8aed4f"
     var path = "https://api.worldoftanks.ru"
     
-    
     func getDataTanks() {
         let session = URLSession.shared
-        let urlOptional = URL(string: "\(path)/wot/encyclopedia/vehicles/?application_id=\(appid)")
+        let urlOptional = URL(string:"https://api.worldoftanks.ru/wot/encyclopedia/vehicles/?application_id=8597d726286d88724d624cd07e8aed4f&limit=10&page_no=1")
+        //                                "\(path)/wot/encyclopedia/vehicles/?application_id=\(appid)")
+        //"https://api.worldoftanks.ru/wot/encyclopedia/vehicles/?application_id=8597d726286d88724d624cd07e8aed4f&limit=10")
+        
         if let url = urlOptional {
             let task = session.dataTask(with: url) { [self] (data, responce, error) in
                 if let error = error {
@@ -38,6 +39,9 @@ class RequestManager {
                 } catch {
                     print("CATCH ERROR \(error.localizedDescription)")
                     tankDataError?(error.localizedDescription)
+                }
+                DispatchQueue.main.async {
+                    tankListDataSuccsesClosure?(tankListData)
                 }
             }
             task.resume()

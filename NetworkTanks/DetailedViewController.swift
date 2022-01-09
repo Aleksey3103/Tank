@@ -19,6 +19,7 @@ class DetailedViewController: UIViewController {
     var dataViewModel = TanksViewModel()
     var detailTank = Datum(name: String.init(), images: Images(smallIcon: String.init()), description: String.init())
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         detailInfo()
@@ -26,10 +27,14 @@ class DetailedViewController: UIViewController {
         descriptionLabel.layer.cornerRadius = 8
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.largeTitleDisplayMode = .automatic
-//        setupNavigationMultilineTitle()
         navigationItem.title = detailTank.name
     }
-
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.view.endEditing(true)
+    }
+    
     func detailInfo() {
         if let imageurl = imageTank.bigIcon {
             Nuke.loadImage(with: imageurl, into: imageDetail.self)
@@ -37,22 +42,4 @@ class DetailedViewController: UIViewController {
         descriptionLabel.text = detailTank.description
     }
 }
-//extension DetailedViewController {
-//
-//    func setupNavigationMultilineTitle() {
-//        guard let navigationBar = self.navigationController?.navigationBar else { return }
-//        for sview in navigationBar.subviews {
-//            for ssview in sview.subviews {
-//                guard let label = ssview as? UILabel else { break }
-//                if label.text == self.title {
-//                    label.numberOfLines = 3
-//                    label.lineBreakMode = .byWordWrapping
-//                    label.sizeToFit()
-//                    UIView.animate(withDuration: 1, animations: {
-//                        navigationBar.frame.size.height = 57 + label.frame.height
-//                    })
-//                }
-//            }
-//        }
-//    }
-//}
+
